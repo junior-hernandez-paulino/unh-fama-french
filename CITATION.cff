@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "Please cite this repository when using its code or research results."
+type: software
+title: "UNH Stock Returns and the Fama-French Model"
+authors:
+  - family-names: "Hernandez Paulino"
+    given-names: "Junior"
+version: 1.0.0
+date-released: 2026-09-09
+repository-code: "https://github.com/junior-hernandez-paulino/unh-fama-french"
+url: "https://github.com/junior-hernandez-paulino/unh-fama-french"
+abstract: "Undergraduate empirical research comparing CAPM, FF3, and FF5 for UNH daily excess returns from May 3, 2021 through March 31, 2026, with 1,234 observations. Includes R code, the manuscript, saved results, figures, and reproduction checks. Original local data are required to rerun the analysis."
+keywords:
+  - econometrics
+  - fama-french
+  - ordinary-least-squares
+  - R
+  - undergraduate-research
+preferred-citation:
+  type: report
+  title: "An Econometric Analysis of UnitedHealth Group's Stock Returns Using the Fama-French Five-Factor Model"
+  authors:
+    - family-names: "Hernandez Paulino"
+      given-names: "Junior"
+  year: 2026
+  institution:
+    name: "Lehman College"
+  version: 1.0.0
+  url: "https://github.com/junior-hernandez-paulino/unh-fama-french"

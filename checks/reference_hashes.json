@@ -1,0 +1,6 @@
+{
+  "results/reference/UNH_full_output.txt": "d3c36577db45cf05b7a297790172abc568eab2e6fc404af302f91c9cb4108d8c",
+  "results/reference/UNH_regression_table.txt": "5f1b890221fbf5e98e43eb4fcbf24e98c5b847a11d812f6b78bf75d27c53d8da",
+  "results/reference/UNH_descriptive_statistics.csv": "724ae185fa543b2fcca2ca144753b599720bb907eac426b6e2e164b25aaf57c5",
+  "checks/expected_coefficients.csv": "75c9c1fe1d4d0595cdcded588f138f0827a17cf2d870b6a493c35f559f91fe61"
+}

@@ -1,0 +1,263 @@
+ECO 402 UNH FAMA-FRENCH PROJECT OUTPUT
+Generated: 2026-05-17 11:51:09 
+
+DATA SOURCES
+UNH stock file: 430odayUNHstock.xlsx
+Fama-French factor source: original local daily CSV; March 2026 vintage (see data/source_manifest.csv)
+Fama-French normalized project file: FF5_factors_daily.csv
+The UNH return and Fama-French factors are both measured in percent.
+
+DATA RANGE AFTER MERGE
+[1] "2021-05-03" "2026-03-31"
+Merged observations: 1234 
+
+DESCRIPTIVE STATISTICS
+           Variable Observations         Mean      Median Standard deviation
+1 UNH_Excess_Return         1234 -0.024925136  0.03529529        1.980748818
+2            Mkt_RF         1234  0.030340357  0.04000000        1.115246348
+3               SMB         1234 -0.019781199 -0.04000000        0.694038828
+4               HML         1234  0.024489465 -0.00500000        0.907521928
+5               RMW         1234  0.017228525  0.00000000        0.659952271
+6               CMA         1234  0.007074554  0.00000000        0.589601663
+7                RF         1234  0.013881686  0.02000000        0.008642992
+    Minimum  Maximum
+1 -22.39967 11.95834
+2  -5.92000  9.65000
+3  -2.53000  4.20000
+4  -3.89000  3.64000
+5  -2.23000  4.25000
+6  -2.92000  2.37000
+7   0.00000  0.02000
+
+CAPM MODEL
+
+Call:
+lm(formula = UNH_Excess_Return ~ Mkt_RF, data = data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-22.4518  -0.8013   0.0344   0.8368  12.1093 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.03725    0.05494  -0.678    0.498    
+Mkt_RF       0.40607    0.04926   8.243 4.24e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1.929 on 1232 degrees of freedom
+Multiple R-squared:  0.05227,	Adjusted R-squared:  0.0515 
+F-statistic: 67.95 on 1 and 1232 DF,  p-value: 4.245e-16
+
+
+FF3 MODEL
+
+Call:
+lm(formula = UNH_Excess_Return ~ Mkt_RF + SMB + HML, data = data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-22.5561  -0.7726   0.0436   0.8389  12.2930 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.04786    0.05481  -0.873 0.382740    
+Mkt_RF       0.48799    0.05484   8.898  < 2e-16 ***
+SMB         -0.12630    0.08397  -1.504 0.132817    
+HML          0.22996    0.06682   3.441 0.000598 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1.921 on 1230 degrees of freedom
+Multiple R-squared:  0.06157,	Adjusted R-squared:  0.05928 
+F-statistic:  26.9 on 3 and 1230 DF,  p-value: < 2.2e-16
+
+
+FF5 MODEL
+
+Call:
+lm(formula = UNH_Excess_Return ~ Mkt_RF + SMB + HML + RMW + CMA, 
+    data = data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-22.4621  -0.7700   0.0426   0.7967  12.1958 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.04781    0.05473  -0.874   0.3825    
+Mkt_RF       0.51161    0.05591   9.150   <2e-16 ***
+SMB         -0.07822    0.09444  -0.828   0.4077    
+HML          0.10591    0.08553   1.238   0.2158    
+RMW          0.07684    0.10402   0.739   0.4602    
+CMA          0.26881    0.11974   2.245   0.0249 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1.918 on 1228 degrees of freedom
+Multiple R-squared:  0.0659,	Adjusted R-squared:  0.0621 
+F-statistic: 17.33 on 5 and 1228 DF,  p-value: < 2.2e-16
+
+
+STARGAZER REGRESSION TABLE
+
+==============================================================================================
+                                               Dependent variable:                            
+                    --------------------------------------------------------------------------
+                                                UNH_Excess_Return                             
+                              (1)                      (2)                      (3)           
+----------------------------------------------------------------------------------------------
+Mkt_RF                      0.406***                 0.488***                 0.512***        
+                            (0.049)                  (0.055)                  (0.056)         
+                                                                                              
+SMB                                                   -0.126                   -0.078         
+                                                     (0.084)                  (0.094)         
+                                                                                              
+HML                                                  0.230***                  0.106          
+                                                     (0.067)                  (0.086)         
+                                                                                              
+RMW                                                                            0.077          
+                                                                              (0.104)         
+                                                                                              
+CMA                                                                           0.269**         
+                                                                              (0.120)         
+                                                                                              
+Constant                     -0.037                   -0.048                   -0.048         
+                            (0.055)                  (0.055)                  (0.055)         
+                                                                                              
+----------------------------------------------------------------------------------------------
+Observations                 1,234                    1,234                    1,234          
+R2                           0.052                    0.062                    0.066          
+Adjusted R2                  0.052                    0.059                    0.062          
+Residual Std. Error    1.929 (df = 1232)        1.921 (df = 1230)        1.918 (df = 1228)    
+F Statistic         67.954*** (df = 1; 1232) 26.900*** (df = 3; 1230) 17.328*** (df = 5; 1228)
+==============================================================================================
+Note:                                                              *p<0.1; **p<0.05; ***p<0.01
+
+JOINT TEST: SMB = HML = RMW = CMA = 0
+
+Linear hypothesis test:
+SMB = 0
+HML = 0
+RMW = 0
+CMA = 0
+
+Model 1: restricted model
+Model 2: UNH_Excess_Return ~ Mkt_RF + SMB + HML + RMW + CMA
+
+  Res.Df    RSS Df Sum of Sq      F   Pr(>F)   
+1   1232 4584.6                                
+2   1228 4518.7  4    65.936 4.4797 0.001348 **
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+JOINT TEST: RMW = CMA = 0
+
+Linear hypothesis test:
+RMW = 0
+CMA = 0
+
+Model 1: restricted model
+Model 2: UNH_Excess_Return ~ Mkt_RF + SMB + HML + RMW + CMA
+
+  Res.Df    RSS Df Sum of Sq      F  Pr(>F)  
+1   1230 4539.7                              
+2   1228 4518.7  2    20.964 2.8486 0.05831 .
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+MODEL COMPARISON: CAPM, FF3, FF5
+Analysis of Variance Table
+
+Model 1: UNH_Excess_Return ~ Mkt_RF
+Model 2: UNH_Excess_Return ~ Mkt_RF + SMB + HML
+Model 3: UNH_Excess_Return ~ Mkt_RF + SMB + HML + RMW + CMA
+  Res.Df    RSS Df Sum of Sq      F   Pr(>F)   
+1   1232 4584.6                                
+2   1230 4539.7  2    44.972 6.1108 0.002287 **
+3   1228 4518.7  2    20.964 2.8486 0.058308 . 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+MULTICOLLINEARITY: VIF FOR FF5
+  Mkt_RF      SMB      HML      RMW      CMA 
+1.302836 1.439641 2.018858 1.579036 1.670055 
+
+BREUSCH-PAGAN TEST
+
+	studentized Breusch-Pagan test
+
+data:  FF5
+BP = 2.3722, df = 5, p-value = 0.7956
+
+
+WHITE TEST AUXILIARY REGRESSION
+
+Call:
+lm(formula = uhat2 ~ yhat + yhat2, data = data)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+ -4.76  -3.50  -3.04  -1.49 500.92 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  3.64252    0.65447   5.566  3.2e-08 ***
+yhat        -0.20798    1.22866  -0.169    0.866    
+yhat2        0.05453    0.74559   0.073    0.942    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 21.93 on 1231 degrees of freedom
+Multiple R-squared:  2.725e-05,	Adjusted R-squared:  -0.001597 
+F-statistic: 0.01678 on 2 and 1231 DF,  p-value: 0.9834
+
+
+White_LM:
+[1] 0.03363219
+White_pvalue:
+[1] 0.9833245
+
+FF5 WITH ROBUST STANDARD ERRORS HC1
+
+t test of coefficients:
+
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.047814   0.054388 -0.8791  0.37950    
+Mkt_RF       0.511605   0.055060  9.2917  < 2e-16 ***
+SMB         -0.078220   0.097863 -0.7993  0.42428    
+HML          0.105915   0.092333  1.1471  0.25157    
+RMW          0.076838   0.096554  0.7958  0.42630    
+CMA          0.268808   0.139686  1.9244  0.05454 .  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+
+DURBIN-WATSON TEST
+
+	Durbin-Watson test
+
+data:  FF5
+DW = 1.915, p-value = 0.06759
+alternative hypothesis: true autocorrelation is greater than 0
+
+
+ANDERSON-DARLING NORMALITY TEST
+
+	Anderson-Darling normality test
+
+data:  residuals(FF5)
+A = 38.353, p-value < 2.2e-16
+
+
+INTERPRETATION GUIDE
+Alpha: p > 0.05 means no statistically significant abnormal return.
+Mkt_RF: positive and significant means UNH moves with the market.
+SMB: negative SMB is consistent with large-cap exposure if significant.
+HML: positive means value exposure; negative means growth exposure.
+RMW: positive means exposure to profitable firms.
+CMA: positive means conservative investment exposure; negative means aggressive investment exposure.
+VIF below 5 is usually acceptable.
+Breusch-Pagan or White p < 0.05 means heteroskedasticity.
+Durbin-Watson p < 0.05 means serial correlation may be present.
+Anderson-Darling p < 0.05 means residuals are not normal.

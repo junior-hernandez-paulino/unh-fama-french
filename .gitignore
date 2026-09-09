@@ -1,0 +1,25 @@
+# Local source data and working output
+data/raw/*
+!data/raw/README.md
+data/reference/
+output/
+
+# RStudio and local settings
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+.Renviron
+.env
+Rplots.pdf
+
+# Office temporary files and operating-system files
+~$*
+Thumbs.db
+.DS_Store
+
+# Source documents are reference material, not repository contents
+*.xlsx
+*.zip
+*.pptx
+*.gif
