@@ -17,3 +17,7 @@ The publication copy is based on the selected GAR manuscript. The local original
 The sample, dependent variable, factors, coefficients, standard errors, p-values, diagnostics, and empirical tables are unchanged. The original five figures are retained. The [source notes](../docs/source_notes.md) document the evidence behind the corrections.
 
 The original manuscript's SHA-256 is `b238c543514c77a3517c21218ef705c5aaf4c90853eb16d5074ed4572ca5e94d`. This identifies the local source version used for the publication edits.
+
+## Version 1.0.1
+
+The September 9 copyedit removes repeated introductions, vague transitions, and duplicated company-background statements. It also shortens the discussion and conclusion while retaining the source distinctions and statistical qualifications. The contents of all six tables, all five figures, the references, and the coefficient-result paragraphs are unchanged. Pagination was checked again, including keeping the significance legend with its table. There were no em dashes in the previous manuscript or the revised one. These are editorial checks, not an authorship assessment.

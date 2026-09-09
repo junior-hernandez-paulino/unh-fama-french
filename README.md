@@ -4,9 +4,9 @@ Undergraduate research by **Junior Hernandez Paulino** for ECO 402 Econometrics 
 
 **Question:** How much of UnitedHealth Group's daily excess stock return can the Fama-French factors explain?
 
-The analysis starts with Bloomberg closing prices, calculates daily returns, and joins them to Kenneth French's daily factors. It compares CAPM, FF3, and FF5 using ordinary least squares in R. The sample is **May 3, 2021 to March 31, 2026**, with **1,234 observations**.
+The R scripts calculate returns from Bloomberg closing prices, join them to Kenneth French's daily factors, and estimate CAPM, FF3, and FF5 by ordinary least squares. The sample is **May 3, 2021 to March 31, 2026**, with **1,234 observations**.
 
-The market factor is positive and significant in every model. FF5 explains about **6.6%** of daily excess-return variation. The stock has below-one estimated market sensitivity, but it still has large daily movements that the factors do not explain.
+The market factor is positive and significant in every model. FF5 explains about **6.6%** of daily excess-return variation. UNH's estimated market coefficient is below one, although large daily movements remain unexplained.
 
 ![Actual and fitted UNH excess returns](figures/Figure_3_Actual_vs_Fitted_UNH_Excess_Returns.png)
 
@@ -99,11 +99,11 @@ The `results/reference/` files and `figures/` images are the saved paper results
 
 This is a daily single-stock study. It uses no trimming or winsorization, does not add company-event variables to the baseline regression, and does not evaluate forecasting performance. HC1 changes standard errors, not coefficients, and does not correct serial correlation. The company screens are May 2026 background context, after the regression sample ends.
 
-The publication manuscript is based on the author's GAR paper. Its empirical results are unchanged. The [revision record](paper/README.md) identifies source-label corrections and interpretation clarifications made for publication. The original course manuscript remains in the local archive.
+The paper is based on the author's edited course manuscript. Its empirical results are unchanged. The [revision record](paper/README.md) lists the publication edits. The original remains in the local archive.
 
 ## Cite this project
 
-Hernandez Paulino, Junior. (2026). *UNH Stock Returns and the Fama-French Model* (Version 1.0.0). Undergraduate research, ECO 402 Econometrics, Lehman College. https://github.com/junior-hernandez-paulino/unh-fama-french
+Hernandez Paulino, Junior. (2026). *UNH Stock Returns and the Fama-French Model* (Version 1.0.1). Undergraduate research, ECO 402 Econometrics, Lehman College. https://github.com/junior-hernandez-paulino/unh-fama-french
 
 Citation metadata are provided in [CITATION.cff](CITATION.cff). The [reproduction report](results/REPRODUCTION.md) records the numerical checks. GitHub's repository check validates the packaged files and links; the numerical reproduction requires the original local data.
 

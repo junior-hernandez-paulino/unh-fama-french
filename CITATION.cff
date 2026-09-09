@@ -5,7 +5,7 @@ title: "UNH Stock Returns and the Fama-French Model"
 authors:
   - family-names: "Hernandez Paulino"
     given-names: "Junior"
-version: 1.0.0
+version: 1.0.1
 date-released: 2026-09-09
 repository-code: "https://github.com/junior-hernandez-paulino/unh-fama-french"
 url: "https://github.com/junior-hernandez-paulino/unh-fama-french"
@@ -25,5 +25,5 @@ preferred-citation:
   year: 2026
   institution:
     name: "Lehman College"
-  version: 1.0.0
+  version: 1.0.1
   url: "https://github.com/junior-hernandez-paulino/unh-fama-french"
